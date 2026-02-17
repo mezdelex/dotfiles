@@ -36,7 +36,7 @@
 > [!TIP]
 >
 > - Run `Update-Module (-Verbose)` to update PowerShell modules.
-> - Run `Uninstall-Module <Module> -MaximumVersion <Version>` to clean up specific PowerShell module stale versions.
+> - Run `Uninstall-Module <Module> -MaximumVersion <Version>` to clean up specific PowerShell module stale versions or delete them manually at `$HOME/Documents/PowerShell/Modules/`.
 
 ---
 
