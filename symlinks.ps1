@@ -1,13 +1,13 @@
 $terminalIconsCurrentDataPath = Get-ChildItem "$HOME/Documents/PowerShell/Modules/Terminal-Icons/*/Data" -Directory | Sort-Object Parent -Descending | Select-Object -First 1 -ExpandProperty FullName
 
 $symlinkPaths = @{
-    "$HOME/.config/wezterm/wezterm.lua" = "./wezterm.lua";
-    "$HOME/.gitconfig" = "./.gitconfig";
-    "$HOME/.vimrc" = "./.vimrc";
+    "$HOME/.config/wezterm" = "./wezterm";
+    "$HOME/.gitconfig" = "./git/.gitconfig";
+    "$HOME/.vimrc" = "./vim/.vimrc";
     "$HOME/AppData/Local/nvim" = "./nvim";
     "$HOME/AppData/Roaming/yazi/config" = "./yazi/config";
-    "$HOME/Documents/PowerShell/Microsoft.PowerShell_profile.ps1" = "./profile.ps1";
-    "$HOME/prompt.toml" = "./prompt.toml";
+    "$HOME/Documents/PowerShell/Microsoft.PowerShell_profile.ps1" = "./powershell/profile.ps1";
+    "$HOME/prompt.toml" = "./oh-my-posh/prompt.toml";
     "$HOME/scoop/persist/flow-launcher/UserData/Themes" = "./flow-launcher/UserData/Themes"
     "$HOME/scoop/persist/k9s/config/config.yaml" = "./k9s/config.yaml";
     "$HOME/scoop/persist/k9s/config/skins/everforest.yaml" = "./k9s/skins/everforest.yaml";
