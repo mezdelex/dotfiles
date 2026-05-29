@@ -26,7 +26,7 @@
 > - Install `k9s` & `kubectl` via `scoop install k9s kubectl` @ PowerShell & `setx K9S_EDITOR nvim`.
 > - Install `zoxide` via `scoop install zoxide` @ PowerShell.
 > - Install `yazi`, `ffmpeg`, `jid`, `jq`, `poppler` & `resvg` via `scoop install yazi ffmpeg jid jq poppler resvg` @ PowerShell & `setx YAZI_FILE_ONE "$HOME/scoop/apps/git/current/usr/bin/file.exe"`.
-> - Install `neovim`, `dotnet-sdk`, `fd`, `go`, `mingw-winlibs-llvm-msvcrt`, `nodejs`, `opencode`, `python`, `ripgrep`, `rustup` & `tree-sitter` via `scoop install neovim dotnet-sdk fd go mingw-winlibs-llvm-msvcrt nodejs opencode python ripgrep rustup tree-sitter` @ PowerShell & follow [config](https://github.com/mezdelex/neovim) instructions.
+> - Install `neovim-nightly`, `dotnet-sdk`, `fd`, `go`, `mingw-winlibs-llvm-msvcrt`, `nodejs`, `opencode`, `python`, `ripgrep`, `rustup` & `tree-sitter` via `scoop install neovim-nightly dotnet-sdk fd go mingw-winlibs-llvm-msvcrt nodejs opencode python ripgrep rustup tree-sitter` @ PowerShell & follow [config](https://github.com/mezdelex/neovim) instructions.
 > - Install `flow-launcher` via `scoop install flow-launcher` @ PowerShell.
 > - Clone this repository via `git clone --recurse-submodules https://github.com/mezdelex/dotfiles` & run [symlinks](https://github.com/mezdelex/dotfiles/blob/main/symlinks.ps1) script with admin rights to set all the symlinks at once @ PowerShell.
 
