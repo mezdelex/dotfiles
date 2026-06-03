@@ -1,6 +1,7 @@
 $terminalIconsCurrentDataPath = Get-ChildItem "$HOME/Documents/PowerShell/Modules/Terminal-Icons/*/Data" -Directory | Sort-Object Parent -Descending | Select-Object -First 1 -ExpandProperty FullName
 
 $symlinkPaths = @{
+    "$HOME/.config/opencode/opencode.jsonc" = "./opencode/opencode.jsonc";
     "$HOME/.config/opencode/tui.json" = "./opencode/tui.json";
     "$HOME/.config/wezterm" = "./wezterm";
     "$HOME/.gitconfig" = "./git/.gitconfig";
