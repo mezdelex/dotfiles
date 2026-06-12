@@ -26,7 +26,7 @@
 > - Install `zoxide` via `scoop install zoxide` @ PowerShell.
 > - Install `yazi`, `ffmpeg`, `jid`, `jq`, `poppler` & `resvg` via `scoop install yazi ffmpeg jid jq poppler resvg` @ PowerShell & `setx YAZI_FILE_ONE "$HOME/scoop/apps/git/current/usr/bin/file.exe"`.
 > - Install `neovim-nightly`, `dotnet-sdk`, `fd`, `go`, `mingw-winlibs-llvm-msvcrt`, `nodejs`, `opencode`, `python`, `ripgrep`, `rustup` & `tree-sitter` via `scoop install neovim-nightly dotnet-sdk fd go mingw-winlibs-llvm-msvcrt nodejs opencode python ripgrep rustup tree-sitter` @ PowerShell & follow [config](https://github.com/mezdelex/neovim) instructions.
-> - Install `ollama` via `scoop install ollama` @ PowerShell & `setx OLLAMA_CONTEXT_LENGTH <value>` before `ollama serve`.
+> - Install `ollama` via `scoop install ollama` @ PowerShell.
 > - Install `flow-launcher` via `scoop install flow-launcher` @ PowerShell.
 > - Clone this repository via `git clone --recurse-submodules https://github.com/mezdelex/dotfiles` & run [symlinks](https://github.com/mezdelex/dotfiles/blob/main/symlinks.ps1) script with admin rights to set all the symlinks at once @ PowerShell.
 
@@ -34,7 +34,7 @@
 
 > [!TIP]
 >
-> - `OLLAMA_CONTEXT_LENGTH` depends on your system specs and model capabilities. For `gemma4:e4b` try with `65536|131072`.
+> - Run `ollama create gemma4:e4b-coder -f .\ollama\gemma4-e4b\Modelfile` & `ollama launch opencode --model gemma4:e4b-coder` for local LLM usage.
 > - Run `Update-Module (-Verbose)` to update PowerShell modules.
 > - Run `Uninstall-Module <Module> -MaximumVersion <Version>` to clean up specific PowerShell module stale versions or delete them manually at `$HOME/Documents/PowerShell/Modules/`.
 
