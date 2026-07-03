@@ -26,7 +26,6 @@
 > - Install `zoxide` via `scoop install zoxide` @ PowerShell.
 > - Install `yazi`, `ffmpeg`, `jid`, `jq`, `poppler` & `resvg` via `scoop install yazi ffmpeg jid jq poppler resvg` @ PowerShell & `setx YAZI_FILE_ONE "$HOME/scoop/apps/git/current/usr/bin/file.exe"`.
 > - Install `neovim-nightly`, `dotnet-sdk`, `fd`, `go`, `mingw-winlibs-llvm-msvcrt`, `nodejs`, `opencode`, `python`, `ripgrep`, `rustup` & `tree-sitter` via `scoop install neovim-nightly dotnet-sdk fd go mingw-winlibs-llvm-msvcrt nodejs opencode python ripgrep rustup tree-sitter` @ PowerShell & follow [config](https://github.com/mezdelex/neovim) instructions.
-> - Install `ollama` via `scoop install ollama` @ PowerShell.
 > - Install `flow-launcher` via `scoop install flow-launcher` @ PowerShell.
 > - Clone this repository via `git clone --recurse-submodules https://github.com/mezdelex/dotfiles` & run [symlinks](https://github.com/mezdelex/dotfiles/blob/main/symlinks.ps1) script with admin rights to set all the symlinks at once @ PowerShell.
 
@@ -34,9 +33,7 @@
 
 > [!TIP]
 >
-> - Run `ollama create gemma4:e4b-coder -f .\ollama\gemma4-e4b\Modelfile` & `ollama launch opencode --model gemma4:e4b-coder` for local LLM usage.
-> - Run `Update-Module (-Verbose)` to update PowerShell modules.
-> - Run `Uninstall-Module <Module> -MaximumVersion <Version>` to clean up specific PowerShell module stale versions or delete them manually at `$HOME/Documents/PowerShell/Modules/`.
+> - Run `Update-Module` to update PowerShell modules.
 
 ---
 
@@ -59,5 +56,4 @@
 |     zoxide     |                                                                                                                                                                                                                       [zoxide](https://github.com/ajeetdsouza/zoxide)                                                                                                                                                                                                                       |                                       n/a                                       |
 |      yazi      |                                                                                                              [yazi](https://github.com/sxyazi/yazi)/[ffmpeg](https://github.com/FFmpeg/FFmpeg)/[jid](https://github.com/simeji/jid)/[jq](https://github.com/jqlang/jq)/[poppler](https://gitlab.freedesktop.org/poppler/poppler)/[resvg](https://github.com/linebender/resvg)                                                                                                               |           [yazi](https://github.com/mezdelex/dotfiles/blob/main/yazi)           |
 |     neovim     | [neovim](https://github.com/neovim/neovim)/[dotnet-sdk](https://github.com/dotnet/sdk)/[fd](https://github.com/sharkdp/fd)/[go](https://github.com/golang/go)/[mingw-winlibs](https://winlibs.com/)/[nodejs](https://github.com/nodejs/node)/[opencode](https://github.com/anomalyco/opencode)/[python](https://github.com/python)/[ripgrep](https://github.com/BurntSushi/ripgrep)/[rustup](https://github.com/rust-lang/rustup)/[tree-sitter](https://github.com/tree-sitter/tree-sitter) |                  [neovim](https://github.com/mezdelex/neovim)                   |
-|     ollama     |                                                                                                                                                                                                            [ollama](https://github.com/ollama/ollama)/[web](https://ollama.com)                                                                                                                                                                                                             |                                       n/a                                       |
 | flow-launcher  |                                                                                                                                                                                                               [flow.launcher](https://github.com/Flow-Launcher/Flow.Launcher)                                                                                                                                                                                                               |  [flow-launcher](https://github.com/mezdelex/dotfiles/blob/main/flow-launcher)  |
