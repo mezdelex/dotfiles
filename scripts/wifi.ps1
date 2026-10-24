@@ -1,21 +1,13 @@
-$networks = [System.Collections.Generic.List[PSCustomObject]]::new()
-
-foreach ($line in (netsh wlan show networks mode=bssid))
-{
-    if ($line -match 'SSID\s+\d+\s+:\s+(.*)')
-    {
-        $currentSsid = $matches[1].Trim()
-    } elseif ($line -match 'Signal\s+:\s+(.*)')
-    {
-        $currentSignal = $matches[1].Trim()
-    } elseif ($line -match 'Channel\s+:\s+(.*)')
-    {
-        $networks.Add([PSCustomObject]@{
-                SSID    = $currentSsid
-                Channel = [int]$matches[1].Trim()
-                Signal  = $currentSignal
-            })
+netsh wlan show networks mode=bssid | ForEach-Object {
+    if ($_ -match '^\s*SSID\s+\d+\s*:\s*(.*)')       { $ssid = $matches[1].Trim() }
+    elseif ($_ -match '^\s*BSSID\s+\d+\s*:\s*(\S+)') { $bssid = $matches[1] }
+    elseif ($_ -match '^\s*Signal\s*:\s*(\d+)')      { $signal = [int]$matches[1] }
+    elseif ($_ -match '^\s*Channel\s*:\s*(\d+)')     {
+        [PSCustomObject]@{
+            SSID    = if ($ssid) { $ssid } else { '<hidden>' }
+            Channel = [int]$matches[1]
+            Signal  = $signal
+            BSSID   = $bssid
+        }
     }
-}
-
-$networks | Sort-Object Channel | Format-Table -AutoSize
+} | Sort-Object Channel, @{ Expression = 'Signal'; Descending = $true } | Format-Table -AutoSize
